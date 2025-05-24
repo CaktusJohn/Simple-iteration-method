@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LAB_CHM_2023_3_1.Properties {
+namespace SI.Properties {
     using System;
     
     

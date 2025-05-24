@@ -1,4 +1,4 @@
-﻿namespace LAB_CHM_2023_3_1
+﻿namespace SI
 {
     partial class Form1
     {
@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.постановкаЗадачToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.тестоваяЗадачаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.основнаяЗадачаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
@@ -62,6 +58,7 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -122,7 +119,6 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -148,38 +144,6 @@
             this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.постановкаЗадачToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1724, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // постановкаЗадачToolStripMenuItem
-            // 
-            this.постановкаЗадачToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.тестоваяЗадачаToolStripMenuItem,
-            this.основнаяЗадачаToolStripMenuItem});
-            this.постановкаЗадачToolStripMenuItem.Name = "постановкаЗадачToolStripMenuItem";
-            this.постановкаЗадачToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
-            this.постановкаЗадачToolStripMenuItem.Text = "Постановка задач";
-            // 
-            // тестоваяЗадачаToolStripMenuItem
-            // 
-            this.тестоваяЗадачаToolStripMenuItem.Name = "тестоваяЗадачаToolStripMenuItem";
-            this.тестоваяЗадачаToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.тестоваяЗадачаToolStripMenuItem.Text = "Тестовая задача";
-            // 
-            // основнаяЗадачаToolStripMenuItem
-            // 
-            this.основнаяЗадачаToolStripMenuItem.Name = "основнаяЗадачаToolStripMenuItem";
-            this.основнаяЗадачаToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.основнаяЗадачаToolStripMenuItem.Text = "Основная задача";
-            // 
             // tabControl1
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -187,11 +151,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 33);
+            this.tabControl1.Location = new System.Drawing.Point(0, -1);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1724, 954);
+            this.tabControl1.Size = new System.Drawing.Size(1609, 860);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -205,27 +169,28 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1716, 925);
+            this.tabPage1.Size = new System.Drawing.Size(1601, 831);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Тестовая задача";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(11, 370);
+            this.button3.Location = new System.Drawing.Point(27, 366);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(289, 28);
+            this.button3.Size = new System.Drawing.Size(264, 30);
             this.button3.TabIndex = 6;
-            this.button3.Text = "ГРАФООООООН";
+            this.button3.Text = "Вывести графики";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(11, 284);
+            this.button1.Location = new System.Drawing.Point(24, 316);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(289, 28);
+            this.button1.Size = new System.Drawing.Size(267, 28);
             this.button1.TabIndex = 5;
             this.button1.Text = "Выполнить расчёт";
             this.button1.UseVisualStyleBackColor = true;
@@ -249,14 +214,14 @@
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Location = new System.Drawing.Point(323, 7);
+            this.groupBox4.Location = new System.Drawing.Point(317, 599);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(1069, 219);
+            this.groupBox4.Size = new System.Drawing.Size(1265, 219);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Справка";
+            this.groupBox4.Text = "Справка для тестовой задачи";
             // 
             // textBox16
             // 
@@ -287,7 +252,7 @@
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(879, 92);
+            this.textBox13.Location = new System.Drawing.Point(799, 92);
             this.textBox13.Margin = new System.Windows.Forms.Padding(4);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
@@ -296,7 +261,7 @@
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(879, 60);
+            this.textBox12.Location = new System.Drawing.Point(799, 60);
             this.textBox12.Margin = new System.Windows.Forms.Padding(4);
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
@@ -305,7 +270,7 @@
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(879, 15);
+            this.textBox11.Location = new System.Drawing.Point(799, 14);
             this.textBox11.Margin = new System.Windows.Forms.Padding(4);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
@@ -333,7 +298,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(840, 101);
+            this.label48.Location = new System.Drawing.Point(766, 95);
             this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(26, 16);
@@ -343,12 +308,13 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(840, 69);
+            this.label46.Location = new System.Drawing.Point(766, 66);
             this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(25, 16);
             this.label46.TabIndex = 12;
             this.label46.Text = "X =";
+            this.label46.Click += new System.EventHandler(this.label46_Click);
             // 
             // label16
             // 
@@ -373,7 +339,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(13, 121);
+            this.label14.Location = new System.Drawing.Point(13, 98);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(272, 16);
@@ -383,7 +349,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(435, 15);
+            this.label13.Location = new System.Drawing.Point(375, 17);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(416, 32);
@@ -417,14 +383,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.tabControl2);
-            this.groupBox3.Location = new System.Drawing.Point(323, 234);
+            this.groupBox3.Location = new System.Drawing.Point(317, 4);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(1380, 681);
+            this.groupBox3.Size = new System.Drawing.Size(1265, 587);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Таблицы";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // tabControl2
             // 
@@ -434,11 +401,11 @@
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Location = new System.Drawing.Point(8, 23);
+            this.tabControl2.Location = new System.Drawing.Point(8, 28);
             this.tabControl2.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1364, 650);
+            this.tabControl2.Size = new System.Drawing.Size(1249, 556);
             this.tabControl2.TabIndex = 3;
             // 
             // tabPage3
@@ -448,7 +415,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(1356, 621);
+            this.tabPage3.Size = new System.Drawing.Size(1241, 527);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "U(x,y)";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -456,11 +423,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 7);
+            this.dataGridView1.Location = new System.Drawing.Point(19, 0);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1337, 603);
+            this.dataGridView1.Size = new System.Drawing.Size(945, 268);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage4
@@ -470,7 +437,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(1356, 621);
+            this.tabPage4.Size = new System.Drawing.Size(1241, 527);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "V(x,y)";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -478,11 +445,11 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(8, 7);
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(1337, 603);
+            this.dataGridView2.Size = new System.Drawing.Size(964, 272);
             this.dataGridView2.TabIndex = 1;
             // 
             // tabPage5
@@ -492,7 +459,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(1356, 621);
+            this.tabPage5.Size = new System.Drawing.Size(1241, 527);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "|U(x,y)-V(x,y)|";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -500,15 +467,16 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(8, 7);
+            this.dataGridView3.Location = new System.Drawing.Point(-4, 10);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(1337, 603);
+            this.dataGridView3.Size = new System.Drawing.Size(1241, 509);
             this.dataGridView3.TabIndex = 1;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.textBox28);
             this.groupBox1.Controls.Add(this.label6);
@@ -525,82 +493,93 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(289, 242);
+            this.groupBox1.Size = new System.Drawing.Size(289, 289);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Параметры";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 226);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 16);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "tau=";
+            this.label8.Click += new System.EventHandler(this.label8_Click_1);
+            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(13, 206);
+            this.button5.Location = new System.Drawing.Point(16, 253);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(265, 28);
+            this.button5.Size = new System.Drawing.Size(264, 28);
             this.button5.TabIndex = 11;
-            this.button5.Text = "Подобрать оптимальный";
+            this.button5.Text = "Подобрать оптимальный tau";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox28
             // 
-            this.textBox28.Location = new System.Drawing.Point(159, 174);
+            this.textBox28.Location = new System.Drawing.Point(41, 223);
             this.textBox28.Margin = new System.Windows.Forms.Padding(4);
             this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(119, 22);
+            this.textBox28.Size = new System.Drawing.Size(93, 22);
             this.textBox28.TabIndex = 10;
             this.textBox28.Text = "1,54";
+            this.textBox28.TextChanged += new System.EventHandler(this.textBox28_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 177);
+            this.label6.Location = new System.Drawing.Point(8, 118);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 16);
+            this.label6.Size = new System.Drawing.Size(133, 16);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Параметр T(тау):";
+            this.label6.Text = "По числу итераций";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(159, 129);
+            this.textBox4.Location = new System.Drawing.Point(175, 156);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(119, 22);
+            this.textBox4.Size = new System.Drawing.Size(93, 22);
             this.textBox4.TabIndex = 8;
             this.textBox4.Text = "1e-6";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 138);
+            this.label5.Location = new System.Drawing.Point(8, 159);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 16);
+            this.label5.Size = new System.Drawing.Size(89, 16);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Значение точности:";
+            this.label5.Text = "По точности";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(159, 86);
+            this.textBox3.Location = new System.Drawing.Point(175, 115);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(119, 22);
+            this.textBox3.Size = new System.Drawing.Size(93, 22);
             this.textBox3.TabIndex = 6;
             this.textBox3.Text = "1500";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 90);
+            this.label4.Location = new System.Drawing.Point(66, 88);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 16);
+            this.label4.Size = new System.Drawing.Size(145, 16);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Кол-во шагов:";
+            this.label4.Text = "Критерии остановки:";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(184, 44);
+            this.textBox2.Location = new System.Drawing.Point(175, 50);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(93, 22);
@@ -609,7 +588,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 44);
+            this.textBox1.Location = new System.Drawing.Point(41, 50);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(93, 22);
@@ -619,7 +598,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(148, 48);
+            this.label3.Location = new System.Drawing.Point(142, 53);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(25, 16);
@@ -629,7 +608,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 48);
+            this.label2.Location = new System.Drawing.Point(11, 53);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 16);
@@ -639,7 +618,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 25);
+            this.label1.Location = new System.Drawing.Point(76, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 16);
@@ -657,7 +636,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1716, 925);
+            this.tabPage2.Size = new System.Drawing.Size(1601, 831);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Основная задача";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -717,6 +696,7 @@
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Справка_2";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // textBox27
             // 
@@ -1169,15 +1149,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1724, 1002);
+            this.ClientSize = new System.Drawing.Size(1611, 892);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Метод простой итерации. Иванов Кирилл. Команда 1.";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Text = "Метод простой итерации. Иванов Кирилл. Команда 1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
@@ -1206,16 +1184,10 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem постановкаЗадачToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem тестоваяЗадачаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem основнаяЗадачаToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -1306,6 +1278,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label8;
     }
 }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace LAB_CHM_2023_3_1
+namespace SI
 {
     internal static class Program
     {

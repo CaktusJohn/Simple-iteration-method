@@ -14,7 +14,7 @@ using cScatter = Plot3D.Graph3D.cScatter;
 using eNormalize = Plot3D.Graph3D.eNormalize;
 using eSchema = Plot3D.ColorSchema.eSchema;
 
-namespace LAB_CHM_2023_3_1
+namespace SI
 {
     public partial class Form5 : Form
     {
@@ -45,11 +45,6 @@ namespace LAB_CHM_2023_3_1
             graph3D1.Raster = (eRaster)3;
             Color[] c_Colors = Plot3D.ColorSchema.GetSchema((eSchema)12);
             graph3D1.SetColorScheme(c_Colors, 4);
-
-        }
-
-        private void graph3D1_Load(object sender, EventArgs e)
-        {
 
         }
     }

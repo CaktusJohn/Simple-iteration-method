@@ -1,5 +1,5 @@
 ﻿
-namespace LAB_CHM_2023_3_1
+namespace SI
 {
     partial class Form2
     {
