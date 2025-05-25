@@ -38,10 +38,9 @@ namespace SI
         }
         double f1(double x, double y) // F для тестовой
         {
-            return Math.Pow(Math.PI, 2) * (Math.Pow(x, 2) + Math.Pow(y, 2)) *
-                       (Math.Pow(Math.Sin(2 * Math.PI * x * y), 2) +
-                        2 * Math.Cos(2 * Math.PI * x * y)) *
-                       Math.Exp(Math.Pow(Math.Sin(Math.PI * x * y), 2));
+            return  0.5 * Math.PI * Math.PI * (x * x + y * y) * Math.Exp(Math.Pow(Math.Sin(Math.PI * x * y), 2)) 
+                * (-4 * Math.Cos(2 * Math.PI * x * y) + Math.Cos(4 * Math.PI * x * y) - 1);
+      
         }
 
         double f2(double x, double y) // F
@@ -139,7 +138,7 @@ namespace SI
                 {
                     f[i][j] = f1(x[i], y[j]);
                     u[i][j] = u1(x[i], y[j]);
-                    if (Math.Abs(f[i][j]) > MaxF) MaxF = Math.Abs(f[i][j]);
+                    if (Math.Abs(f[i][j]) > MaxF) MaxF = Math.Abs(f[i][j]); // максимальная невязка в начале
                     R[i][j] = 0;
                 }
             }
@@ -167,7 +166,7 @@ namespace SI
 
             // МЕТОД ПРОСТОЙ ИТЕРАЦИИ
             double temp, prev, currentEps;
-            double Eps_max;
+            double Eps_max; // разность между итерациями
             double Tau = Convert.ToDouble(textBox28.Text);
             double maxtau;
             //Нужно для проверки сходимости
@@ -175,7 +174,6 @@ namespace SI
             double opttau;
             Min = -4 * h2 * Math.Pow(Math.Sin(Math.PI / (2.0 * n)), 2) - 4 * k2 * Math.Pow(Math.Sin(Math.PI / (2.0 * m)), 2);
             Max = -4 * h2 * Math.Pow(Math.Cos(Math.PI / (2.0 * n)), 2) - 4 * k2 * Math.Pow(Math.Cos(Math.PI / (2.0 * m)), 2);
-            //Max = -4 * h2 * Math.Pow(Math.Sin(Math.PI * (n - 1) / (2.0 * n)), 2) - 4 * k2 * Math.Pow(Math.Sin(Math.PI * (m - 1) / (2.0 * m)), 2);
             opttau = 2 / (Max + Min);
             maxtau = 2 / Max;
             if ((Tau <= 0) || (Tau > maxtau))
@@ -190,7 +188,7 @@ namespace SI
 
             while (true)
             {
-                // невязка для тау
+                // невязка для рассчета следующец итерации
 
                 for (int j = 1; j < m; j++)
                 {
@@ -219,6 +217,7 @@ namespace SI
                 if ((Eps_max < Eps) || (p > N_max))
                     break;
             }
+
             //считаем невязку ещё раз после заполнения матрицы чтобы найти максимальную
             temp = 0;
             for (int j = 1; j < m; j++)
@@ -333,7 +332,6 @@ namespace SI
             textBox12.Text = Convert.ToString(xMax);
             textBox13.Text = Convert.ToString(yMax);
 
-            textBox14.Text = "Нулевое начальноe приближение";
 
         }
         //ОСНОВНАЯ ЗАДАЧА
@@ -375,12 +373,12 @@ namespace SI
 
             for (int i = 0; i <= n; i++)  //Заполнение массива x
             {
-                x[i] = -1 + i * h;
+                x[i] = 0 + i * h;
             }
 
             for (int j = 0; j <= m; j++)  //Заполнение массива y
             {
-                y[j] = -1 + j * k;
+                y[j] = 0 + j * k;
             }
 
             for (int j = 0; j <= m; j++)            //Заполнение массива f 
@@ -425,14 +423,15 @@ namespace SI
             Min = -4 * h2 * Math.Pow(Math.Sin(Math.PI / (2.0 * n)), 2) - 4 * k2 * Math.Pow(Math.Sin(Math.PI / (2.0 * m)), 2);
             Max = -4 * h2 * Math.Pow(Math.Cos(Math.PI / (2.0 * n)), 2) - 4 * k2 * Math.Pow(Math.Cos(Math.PI / (2.0 * m)), 2);
             opttau = 2 / (Max + Min);
+            double maxtau = 2 / Max;
             if ((Tau <= 0) || (Tau > opttau))
             {
                 MessageBox.Show(
-                "ПРИ ВАШЕМ ПАРАМЕТРЕ ТАУ МЕТОД НЕ БУДЕТ СХОДИТСЯ!\n" + "Оптимальное 0 < T(тау) < " + opttau.ToString() +
-                "\n Будет выставленно ТАУ по верхней границе.",
-                "Проверка T(тау)");
+               "ПРИ ДАННОМ ПАРАМЕТРЕ ТАУ МЕТОД НЕ БУДЕТ СХОДИТСЯ!\n" + " 0 < tau < " + maxtau.ToString() +
+               "\n Будет рассчитано с оптимальным значением tau=" + opttau.ToString(),
+               "Проверка tau");
                 textBox29.Text = Convert.ToString(opttau);
-                Tau = Max;
+                Tau = opttau;
             }
 
             while (true)
@@ -442,8 +441,7 @@ namespace SI
                     for (int i = 1; i < n; i++)
                     {
                         R1[i][j]= A * v2[i][j] + h2 * (v2[i - 1][j] + v2[i + 1][j]) + k2 * (v2[i][j - 1] + v2[i][j + 1]) - f2(x[i], y[j]);
-                        //if (temp >= maxR1) maxR1 = Math.Abs(temp);
-                        //maxR1 += temp * temp;
+                       
                     }
                 }
 
@@ -453,7 +451,7 @@ namespace SI
                     for (int i = 1; i < n; i++)
                     {
                         prev = v2[i][j];
-                        temp = prev - Tau * R1[i][j]; // вот тут метод простой итерации
+                        temp = prev - Tau * R1[i][j]; // метод простой итерации
                         currentEps = Math.Abs(prev - temp);
                         if (currentEps > Eps_max) { Eps_max = currentEps; };
                         v2[i][j] = temp;
@@ -464,7 +462,6 @@ namespace SI
                 if ((Eps_max < Eps) || (p > N_max))
                     break;
             }
-            // nevyazka na vyhode
             temp = 0.0;
             for (int j = 1; j < m; j++)
             {
@@ -472,23 +469,19 @@ namespace SI
                 {
                     temp = A * v2[i][j] + h2 * (v2[i - 1][j] + v2[i + 1][j]) + k2 * (v2[i][j - 1] + v2[i][j + 1])  - f2(x[i], y[j]);
                     if (Math.Abs(temp) >= maxR1) maxR1 = Math.Abs(temp);
-                    //maxR1 += temp * temp;
                 }
             }
-            //maxR1 = Math.Sqrt(maxR1);
-
-            // solution whis step / 2
+            // решение на удвоенной сетке
             n = 2 * n;
             m = 2 * m;
-            //double[][] v2_2;
             x = new double[n + 1];
             y = new double[m + 1];
             v2_2 = new double[n + 1][];
             R2 = new double[n + 1][];
             f = new double[n + 1][];
 
-            h = 2.0 / n;
-            k = 2.0 / m;
+            h = 1.0 / n;
+            k = 1.0 / m;
             h2 = -1.0 / (h * h); 
             k2 = -1.0 / (k * k); 
             A = -2 * (h2 + k2);
@@ -505,12 +498,12 @@ namespace SI
 
             for (int i = 0; i <= n; i++)  //Заполнение массива x
             {
-                x[i] = -1 + i * h;
+                x[i] = i * h;
             }
 
             for (int j = 0; j <= m; j++)  //Заполнение массива y
             {
-                y[j] = -1 + j * k;
+                y[j] =  j * k;
             }
 
             for (int j = 0; j <= m; j++)            //Заполнение массива f 
@@ -543,16 +536,12 @@ namespace SI
                     v2_2[i][j] = 0.0;
                 }
             }
-
-            // UpRelaxMethod
+  
             temp = 0.0;
             prev = 0.0;
             currentEps = 0.0;
             double Eps_max2;
 
-            //Tau = Convert.ToDouble(textBox29.Text);
-
-            //Нужно для проверки сходимости
             Min = -4 * h2 * Math.Pow(Math.Sin(Math.PI / (2.0 * n)), 2) - 4 * k2 * Math.Pow(Math.Sin(Math.PI / (2.0 * m)), 2);
             Max = -4 * h2 * Math.Pow(Math.Cos(Math.PI / (2.0 * n)), 2) - 4 * k2 * Math.Pow(Math.Cos(Math.PI / (2.0 * m)), 2);
             Tau = 2 / (Max + Min);
@@ -564,8 +553,7 @@ namespace SI
                     for (int i = 1; i < n; i++)
                     {
                         R2[i][j] = A * v2_2[i][j] + h2 * (v2_2[i - 1][j] + v2_2[i + 1][j]) + k2 * (v2_2[i][j - 1] + v2_2[i][j + 1]) - f2(x[i], y[j]);
-                        //if (temp >= maxR1) maxR = Math.Abs(temp);
-                        //maxR += temp * temp;
+                        
                     }
                 }
 
@@ -575,7 +563,7 @@ namespace SI
                     for (int i = 1; i < n; i++)
                     {
                         prev = v2_2[i][j];
-                        temp = prev - Tau * R2[i][j]; // вот тут метод простой итерации
+                        temp = prev - Tau * R2[i][j]; 
                         currentEps = Math.Abs(prev - temp);
                         if (currentEps > Eps_max2) { Eps_max2 = currentEps; };
                         v2_2[i][j] = temp;
@@ -587,7 +575,6 @@ namespace SI
                     break;
             }
 
-            // nevyazka na vyhode
             temp = 0.0;
             for (int j = 1; j < m; j++)
             {
@@ -595,15 +582,12 @@ namespace SI
                 {
                     temp = A * v2_2[i][j] + h2 * (v2_2[i - 1][j] + v2_2[i + 1][j]) + k2 * (v2_2[i][j - 1] + v2_2[i][j + 1]) - f2(x[i], y[j]);
                     if (Math.Abs(temp) >= maxR) maxR = Math.Abs(temp);
-                    //maxR += temp * temp;
                 }
             }
 
-            //maxR = Math.Sqrt(maxR);
 
             n = n / 2;
             m = m / 2;
-            // table
 
             dataGridView4.Rows.Clear();
             dataGridView4.Columns.Clear();
@@ -698,16 +682,6 @@ namespace SI
                 }
             }
 
-            //МОЖЕТ БЫТЬ НА ДОРАБОТКЕ, НУЖНО ДЛЯ ЗАПОЛНЕНИЯ ТАБИЦЫ С ПОЛОВИННЫМ ШАГОМ ПО КАЖДОМУ ШАГУ
-            /*for (int j = 0; j <= m*2; j++)              //Заполнение таблиц значениями
-            {
-                for (int i = 0; i <= n*2; i++)
-                {
-                    v2_2[i][j] = Math.Round(v2_2[i][j] * 1000) / 1000;
-
-                    dataGridView5.Rows[j + 1].Cells[i + 2].Value = v2_2[i][j];
-                }
-            }*/ 
 
             // Справка
             textBox17.Text = Convert.ToString(p);
@@ -766,7 +740,7 @@ namespace SI
         {
             int n = Convert.ToInt32(textBox8.Text);
             int m = Convert.ToInt32(textBox7.Text);
-            double h = 2.0 / (double)n, k = 2.0 / (double)m; //Шаги по x и y
+            double h = 1.0 / (double)n, k = 1.0 / (double)m; //Шаги по x и y
             double h2 = -1.0 / (h * h), k2 = -1.0 / (k * k);
             double Max, Min;
             Min = -4 * h2 * Math.Pow(Math.Sin(Math.PI / (2.0 * n)), 2) - 4 * k2 * Math.Pow(Math.Sin(Math.PI / (2.0 * m)), 2);
@@ -774,46 +748,27 @@ namespace SI
             Tau = 2 / (Max + Min);
 
             MessageBox.Show(
-            "Оптимальное T(тау)  = " + Tau.ToString(),
+            "Оптимальное tau  = " + Tau.ToString(),
             "Подсчёт ТАУ");
             textBox29.Text = Convert.ToString(Tau);
         }
 
-        private void textBox28_TextChanged(object sender, EventArgs e)
+        private void textBox29_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void textBox10_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void textBox11_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-            Form3 form3 = new Form3();
-            form3.Show();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-            Form2 form2 = new Form2();
-            form2.Show();
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click_1(object sender, EventArgs e)
+        private void textBox15_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -214,5 +214,10 @@ namespace SI
             Form5 form5 = new Form5(ARR, N, M);
             form5.Show();
         }
+
+        private void graph3D1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,7 +35,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -107,13 +106,14 @@
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox29 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
@@ -155,21 +155,21 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1609, 860);
+            this.tabControl1.Size = new System.Drawing.Size(1621, 831);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1601, 831);
+            this.tabPage1.Size = new System.Drawing.Size(1613, 802);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Тестовая задача";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -200,7 +200,6 @@
             // 
             this.groupBox4.Controls.Add(this.textBox16);
             this.groupBox4.Controls.Add(this.textBox15);
-            this.groupBox4.Controls.Add(this.textBox14);
             this.groupBox4.Controls.Add(this.textBox13);
             this.groupBox4.Controls.Add(this.textBox12);
             this.groupBox4.Controls.Add(this.textBox11);
@@ -214,81 +213,75 @@
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Location = new System.Drawing.Point(317, 599);
+            this.groupBox4.Location = new System.Drawing.Point(305, 580);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(1265, 219);
+            this.groupBox4.Size = new System.Drawing.Size(1304, 218);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Справка для тестовой задачи";
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(440, 177);
+            this.textBox16.Location = new System.Drawing.Point(503, 183);
             this.textBox16.Margin = new System.Windows.Forms.Padding(4);
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(263, 22);
+            this.textBox16.Size = new System.Drawing.Size(163, 22);
             this.textBox16.TabIndex = 17;
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(496, 148);
+            this.textBox15.Location = new System.Drawing.Point(503, 140);
             this.textBox15.Margin = new System.Windows.Forms.Padding(4);
             this.textBox15.Name = "textBox15";
             this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(207, 22);
+            this.textBox15.Size = new System.Drawing.Size(163, 22);
             this.textBox15.TabIndex = 17;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(304, 117);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(399, 22);
-            this.textBox14.TabIndex = 16;
+            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(799, 92);
+            this.textBox13.Location = new System.Drawing.Point(1128, 106);
             this.textBox13.Margin = new System.Windows.Forms.Padding(4);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(168, 22);
+            this.textBox13.Size = new System.Drawing.Size(162, 22);
             this.textBox13.TabIndex = 15;
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(799, 60);
+            this.textBox12.Location = new System.Drawing.Point(1127, 72);
             this.textBox12.Margin = new System.Windows.Forms.Padding(4);
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(168, 22);
+            this.textBox12.Size = new System.Drawing.Size(163, 22);
             this.textBox12.TabIndex = 15;
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(799, 14);
+            this.textBox11.Location = new System.Drawing.Point(1127, 33);
             this.textBox11.Margin = new System.Windows.Forms.Padding(4);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(168, 22);
+            this.textBox11.Size = new System.Drawing.Size(163, 22);
             this.textBox11.TabIndex = 15;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(193, 52);
+            this.textBox10.Location = new System.Drawing.Point(503, 72);
             this.textBox10.Margin = new System.Windows.Forms.Padding(4);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(163, 22);
             this.textBox10.TabIndex = 15;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(193, 23);
+            this.textBox9.Location = new System.Drawing.Point(503, 33);
             this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
@@ -298,7 +291,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(766, 95);
+            this.label48.Location = new System.Drawing.Point(1094, 112);
             this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(26, 16);
@@ -308,7 +301,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(766, 66);
+            this.label46.Location = new System.Drawing.Point(1094, 72);
             this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(25, 16);
@@ -319,53 +312,52 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(13, 186);
+            this.label16.Location = new System.Drawing.Point(13, 189);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(397, 16);
+            this.label16.Size = new System.Drawing.Size(408, 16);
             this.label16.TabIndex = 5;
-            this.label16.Text = "Схема на сетке решена с невязкой (норма максимума) R(p)=";
+            this.label16.Text = "5)Схема на сетке решена с невязкой (норма максимума) R(p)=";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(13, 158);
+            this.label15.Location = new System.Drawing.Point(13, 143);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(451, 16);
+            this.label15.Size = new System.Drawing.Size(462, 16);
             this.label15.TabIndex = 4;
-            this.label15.Text = "Невязка СЛАУ на начальном приближении (норма максимума) R(0)=";
+            this.label15.Text = "4)Невязка СЛАУ на начальном приближении (норма максимума) R(0)=";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(13, 98);
+            this.label14.Location = new System.Drawing.Point(13, 112);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(272, 16);
+            this.label14.Size = new System.Drawing.Size(242, 16);
             this.label14.TabIndex = 3;
-            this.label14.Text = "Начальное приближения посчитано как ";
+            this.label14.Text = "3)Нулевое начальное приближение";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(375, 17);
+            this.label13.Location = new System.Drawing.Point(692, 33);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(416, 32);
+            this.label13.Size = new System.Drawing.Size(427, 16);
             this.label13.TabIndex = 2;
-            this.label13.Text = "Максимальная разность точного и численного решений |U-V| =\r\n(координаты, в которы" +
-    "х достигается максимальная разность)";
+            this.label13.Text = "6)Максимальная разность точного и численного решений |U-V| =";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 60);
+            this.label12.Location = new System.Drawing.Point(13, 72);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(165, 16);
+            this.label12.Size = new System.Drawing.Size(482, 16);
             this.label12.TabIndex = 1;
-            this.label12.Text = "Погрешность решения = ";
+            this.label12.Text = "2)Точность( максимальная разность текущего и предыдущего элемента)";
             // 
             // label11
             // 
@@ -373,25 +365,21 @@
             this.label11.Location = new System.Drawing.Point(13, 33);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(164, 16);
+            this.label11.Size = new System.Drawing.Size(175, 16);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Количество итераций = ";
+            this.label11.Text = "1)Количество итераций = ";
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.tabControl2);
-            this.groupBox3.Location = new System.Drawing.Point(317, 4);
+            this.groupBox3.Location = new System.Drawing.Point(305, 16);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(1265, 587);
+            this.groupBox3.Size = new System.Drawing.Size(1304, 552);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Таблицы";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // tabControl2
             // 
@@ -405,7 +393,7 @@
             this.tabControl2.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1249, 556);
+            this.tabControl2.Size = new System.Drawing.Size(1288, 516);
             this.tabControl2.TabIndex = 3;
             // 
             // tabPage3
@@ -415,7 +403,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(1241, 527);
+            this.tabPage3.Size = new System.Drawing.Size(1280, 487);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "U(x,y)";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -423,11 +411,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 8);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(945, 268);
+            this.dataGridView1.Size = new System.Drawing.Size(1272, 471);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage4
@@ -437,7 +426,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(1241, 527);
+            this.tabPage4.Size = new System.Drawing.Size(1280, 487);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "V(x,y)";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -445,11 +434,11 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Location = new System.Drawing.Point(4, 8);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(964, 272);
+            this.dataGridView2.Size = new System.Drawing.Size(1272, 471);
             this.dataGridView2.TabIndex = 1;
             // 
             // tabPage5
@@ -459,7 +448,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(1241, 527);
+            this.tabPage5.Size = new System.Drawing.Size(1280, 487);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "|U(x,y)-V(x,y)|";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -467,11 +456,11 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(-4, 10);
+            this.dataGridView3.Location = new System.Drawing.Point(4, 8);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(1241, 509);
+            this.dataGridView3.Size = new System.Drawing.Size(1268, 471);
             this.dataGridView3.TabIndex = 1;
             // 
             // groupBox1
@@ -506,7 +495,6 @@
             this.label8.Size = new System.Drawing.Size(32, 16);
             this.label8.TabIndex = 12;
             this.label8.Text = "tau=";
-            this.label8.Click += new System.EventHandler(this.label8_Click_1);
             // 
             // button5
             // 
@@ -521,13 +509,12 @@
             // 
             // textBox28
             // 
-            this.textBox28.Location = new System.Drawing.Point(41, 223);
+            this.textBox28.Location = new System.Drawing.Point(48, 223);
             this.textBox28.Margin = new System.Windows.Forms.Padding(4);
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(93, 22);
             this.textBox28.TabIndex = 10;
             this.textBox28.Text = "1,54";
-            this.textBox28.TextChanged += new System.EventHandler(this.textBox28_TextChanged);
             // 
             // label6
             // 
@@ -621,9 +608,9 @@
             this.label1.Location = new System.Drawing.Point(76, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 16);
+            this.label1.Size = new System.Drawing.Size(125, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Размеры сетки";
+            this.label1.Text = "Число разбиений:";
             // 
             // tabPage2
             // 
@@ -636,28 +623,28 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1601, 831);
+            this.tabPage2.Size = new System.Drawing.Size(1613, 802);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Основная задача";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(11, 432);
+            this.button4.Location = new System.Drawing.Point(19, 370);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(289, 28);
+            this.button4.Size = new System.Drawing.Size(265, 28);
             this.button4.TabIndex = 13;
-            this.button4.Text = "ГРАФООООООН";
+            this.button4.Text = "Построить графики";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(11, 322);
+            this.button2.Location = new System.Drawing.Point(19, 322);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(289, 31);
+            this.button2.Size = new System.Drawing.Size(265, 31);
             this.button2.TabIndex = 12;
             this.button2.Text = "Выполнить расчёт";
             this.button2.UseVisualStyleBackColor = true;
@@ -695,7 +682,7 @@
             this.groupBox2.Size = new System.Drawing.Size(1069, 272);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Справка_2";
+            this.groupBox2.Text = "Справка для основной задачи";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // textBox27
@@ -937,7 +924,7 @@
             this.tabControl3.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1379, 601);
+            this.tabControl3.Size = new System.Drawing.Size(1293, 600);
             this.tabControl3.TabIndex = 3;
             // 
             // tabPage6
@@ -947,7 +934,7 @@
             this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage6.Size = new System.Drawing.Size(1371, 572);
+            this.tabPage6.Size = new System.Drawing.Size(1285, 571);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "V(x,y)";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -955,11 +942,11 @@
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(8, 7);
+            this.dataGridView4.Location = new System.Drawing.Point(8, 8);
             this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.Size = new System.Drawing.Size(1352, 554);
+            this.dataGridView4.Size = new System.Drawing.Size(1269, 555);
             this.dataGridView4.TabIndex = 0;
             // 
             // tabPage7
@@ -969,7 +956,7 @@
             this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage7.Size = new System.Drawing.Size(1371, 572);
+            this.tabPage7.Size = new System.Drawing.Size(1285, 571);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "V2(x,y)";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -991,7 +978,7 @@
             this.tabPage8.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage8.Size = new System.Drawing.Size(1371, 572);
+            this.tabPage8.Size = new System.Drawing.Size(1285, 571);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "|V(x,y)-V2(x,y)|";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1008,13 +995,14 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.label17);
+            this.groupBox6.Controls.Add(this.label7);
+            this.groupBox6.Controls.Add(this.label10);
+            this.groupBox6.Controls.Add(this.label9);
             this.groupBox6.Controls.Add(this.button6);
             this.groupBox6.Controls.Add(this.textBox29);
             this.groupBox6.Controls.Add(this.textBox5);
-            this.groupBox6.Controls.Add(this.label7);
-            this.groupBox6.Controls.Add(this.label34);
             this.groupBox6.Controls.Add(this.textBox6);
-            this.groupBox6.Controls.Add(this.label35);
             this.groupBox6.Controls.Add(this.textBox7);
             this.groupBox6.Controls.Add(this.textBox8);
             this.groupBox6.Controls.Add(this.label36);
@@ -1024,14 +1012,53 @@
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(289, 308);
+            this.groupBox6.Size = new System.Drawing.Size(289, 295);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Параметры";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(12, 228);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(32, 16);
+            this.label17.TabIndex = 17;
+            this.label17.Text = "tau=";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 170);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "По точности";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 122);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(133, 16);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "По числу итераций";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(58, 84);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(145, 16);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Критерии остановки:";
+            // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(13, 238);
+            this.button6.Location = new System.Drawing.Point(8, 258);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(265, 28);
@@ -1042,60 +1069,31 @@
             // 
             // textBox29
             // 
-            this.textBox29.Location = new System.Drawing.Point(159, 182);
+            this.textBox29.Location = new System.Drawing.Point(52, 225);
             this.textBox29.Margin = new System.Windows.Forms.Padding(4);
             this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(119, 22);
+            this.textBox29.Size = new System.Drawing.Size(93, 22);
             this.textBox29.TabIndex = 12;
             this.textBox29.Text = "1,54";
+            this.textBox29.TextChanged += new System.EventHandler(this.textBox29_TextChanged);
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(159, 134);
+            this.textBox5.Location = new System.Drawing.Point(184, 164);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(119, 22);
+            this.textBox5.Size = new System.Drawing.Size(93, 22);
             this.textBox5.TabIndex = 8;
             this.textBox5.Text = "1e-6";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 186);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 16);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Параметр T(тау):";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(9, 138);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(139, 16);
-            this.label34.TabIndex = 7;
-            this.label34.Text = "Значение точности:";
-            // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(159, 90);
+            this.textBox6.Location = new System.Drawing.Point(184, 122);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(119, 22);
+            this.textBox6.Size = new System.Drawing.Size(93, 22);
             this.textBox6.TabIndex = 6;
             this.textBox6.Text = "1500";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(9, 90);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(96, 16);
-            this.label35.TabIndex = 5;
-            this.label35.Text = "Кол-во шагов:";
             // 
             // textBox7
             // 
@@ -1138,24 +1136,22 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(9, 25);
+            this.label38.Location = new System.Drawing.Point(69, 23);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(106, 16);
+            this.label38.Size = new System.Drawing.Size(125, 16);
             this.label38.TabIndex = 0;
-            this.label38.Text = "Размеры сетки";
+            this.label38.Text = "Число разбиений:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1611, 892);
+            this.ClientSize = new System.Drawing.Size(1623, 863);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Метод простой итерации. Иванов Кирилл. Команда 1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
@@ -1233,9 +1229,7 @@
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label36;
@@ -1244,7 +1238,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
@@ -1273,12 +1266,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox28;
         private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label17;
     }
 }
 
