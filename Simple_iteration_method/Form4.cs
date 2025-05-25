@@ -52,7 +52,7 @@ namespace SI
                 {
                     for (int Y = 0; Y < arr.GetLength(1); Y++)
                     {
-                        i_Points3D[X, Y] = new cPoint3D(X * 2.0 / (double)n - 1, Y * 2.0 / (double)m - 1, arr[X, Y]);
+                        i_Points3D[X, Y] = new cPoint3D(X * 1.0 / (double)n , Y * 1.0 / (double)m , arr[X, Y]);
                     }
                 }
 
@@ -61,19 +61,10 @@ namespace SI
                 {
                     for (int Y = 0; Y < arr2.GetLength(1); Y++)
                     {
-                        i_Points3D2[X, Y] = new cPoint3D(X * 2.0 / (double)n - 1, Y * 2.0 / (double)m - 1, arr2[X, Y]);
+                        i_Points3D2[X, Y] = new cPoint3D(X * 1.0 / (double)n , Y * 1.0 / (double)m , arr2[X, Y]);
                     }
                 }
-                // Setting one of the strings = null results in hiding this legend
-                graph3D1.AxisX_Legend = "X from -1 to 1";
-                graph3D1.AxisY_Legend = "Y from -1 to 1";
-                graph3D1.AxisZ_Legend = "U";
-
-                graph3D2.AxisX_Legend = "X from -1 to 1";
-                graph3D2.AxisY_Legend = "Y from -1 to 1";
-                graph3D2.AxisZ_Legend = "V";
-                // IMPORTANT: Normalize X,Y,Z separately because there is an extreme mismatch
-                // between X values (< 300) and Z values (> 30000)
+               
 
                 graph3D1.SetSurfacePoints(i_Points3D, eNormalize.Separate);
 
@@ -128,7 +119,7 @@ namespace SI
                 {
                     for (int Y = 0; Y < arr.GetLength(1); Y++)
                     {
-                        i_Points3D[X, Y] = new cPoint3D(X * 2.0 / (double)n - 1, Y * 2.0 / (double)m - 1, arr[X, Y]);
+                        i_Points3D[X, Y] = new cPoint3D(X * 0.5 / (double)n, Y * 0.5 / (double)m , arr[X, Y]);
                     }
                 }
 
@@ -137,19 +128,12 @@ namespace SI
                 {
                     for (int Y = 0; Y < arr2.GetLength(1); Y++)
                     {
-                        i_Points3D2[X, Y] = new cPoint3D(X * 2.0 / (double)n - 1, Y * 2.0 / (double)m - 1, arr2[X, Y]);
+                        i_Points3D2[X, Y] = new cPoint3D(X * 0.5 / (double)n , Y * 0.5 / (double)m, arr2[X, Y]);
                     }
                 }
-                graph3D1.AxisX_Legend = "X from -1 to 1";
-                graph3D1.AxisY_Legend = "Y from -1 to 1";
-                graph3D1.AxisZ_Legend = "V";
+               
 
-                graph3D2.AxisX_Legend = "X from -1 to 1";
-                graph3D2.AxisY_Legend = "Y from -1 to 1";
-                graph3D2.AxisZ_Legend = "V_2";
-
-                // IMPORTANT: Normalize X,Y,Z separately because there is an extreme mismatch
-                // between X values (< 300) and Z values (> 30000)
+              
 
                 graph3D1.SetSurfacePoints(i_Points3D, eNormalize.Separate);
 
@@ -204,8 +188,7 @@ namespace SI
                 }
             }
 
-            // IMPORTANT: Normalize X,Y,Z separately because there is an extreme mismatch
-            // between X values (< 300) and Z values (> 30000)
+       
             graph3D1.SetSurfacePoints(i_Points3D, eNormalize.Separate);
         }
 

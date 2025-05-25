@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A3040268-EFA3-458D-A6D7-9EB9D00BE085}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>LAB_CHM_2023_3_1</RootNamespace>
-    <AssemblyName>LAB_CHM_2023_3_1</AssemblyName>
+    <RootNamespace>Simple_iteration_method</RootNamespace>
+    <AssemblyName>Simple_iteration_method</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

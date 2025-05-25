@@ -28,17 +28,10 @@ namespace SI
             {
                 for (int Y = 0; Y < ARR.GetLength(1); Y++)
                 {
-                    i_Points3D[X, Y] = new cPoint3D(X * 2.0 / (double)n - 1, Y * 2.0 / (double)m - 1, ARR[X, Y]);
+                    i_Points3D[X, Y] = new cPoint3D(X * 1.0 / (double)n , Y * 1.0 / (double)m , ARR[X, Y]);
                 }
             }
 
-            // Setting one of the strings = null results in hiding this legend
-            graph3D1.AxisX_Legend = "X from -1 to 1";
-            graph3D1.AxisY_Legend = "Y from -1 to 1";
-            graph3D1.AxisZ_Legend = "U-V";
-
-            // IMPORTANT: Normalize X,Y,Z separately because there is an extreme mismatch
-            // between X values (< 300) and Z values (> 30000)
 
             graph3D1.SetSurfacePoints(i_Points3D, eNormalize.Separate);
 

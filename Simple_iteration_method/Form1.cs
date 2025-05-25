@@ -772,5 +772,15 @@ namespace SI
         {
 
         }
+
+        private void textBox26_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox24_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

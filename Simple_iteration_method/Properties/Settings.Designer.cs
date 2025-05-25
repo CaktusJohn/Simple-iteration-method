@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SI.Properties {
+namespace Simple_iteration_method.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
